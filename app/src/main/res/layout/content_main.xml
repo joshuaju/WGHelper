@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="joshuajungen.shoppinghelper.MainActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main"
+    android:weightSum="8">
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:id="@+id/imgbtnFilePicker"
+            android:onClick="imgbtnFilePicker_OnClick"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/cloud_download"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/selectedFile"
+            android:id="@+id/tvSelectedFile"
+            android:layout_weight="3"
+            android:onClick="imgbtnFilePicker_OnClick"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAlignment="center" />
+
+        <ProgressBar
+            android:id="@+id/pbDownloading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+
+    </TableRow>
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@mipmap/calendar"
+            android:id="@+id/imgbtnCalendar"
+            android:onClick="imgbtnCalendar_OnClick"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="@string/date"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvDate"
+            android:onClick="imgbtnCalendar_OnClick" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></FrameLayout>
+
+    </TableRow>
+
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal">
+
+            <ImageButton
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@mipmap/subject"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerExpenseType"
+                android:layout_weight="3" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@mipmap/pencil"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <AutoCompleteTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/purpose"
+            android:singleLine="true"
+            android:id="@+id/tvPurpose"
+            android:layout_weight="3">
+            <requestFocus/>
+        </AutoCompleteTextView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </TableRow>
+
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@mipmap/coin_euro"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount"
+            android:id="@+id/tvAmount"
+            android:inputType="numberDecimal"
+            android:layout_weight="3"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@mipmap/user"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerPaidBy"
+            android:layout_weight="3"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </TableRow>
+
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="5"
+        android:gravity="center_vertical|center_horizontal"
+        android:baselineAligned="false"
+        android:layout_weight="1.8">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></FrameLayout>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/expense"
+            android:id="@+id/btnExpense"
+            android:onClick="btnExpense_OnClick"
+            android:layout_weight="3"
+            android:drawableLeft="@mipmap/cloud_upload" />
+
+        <ProgressBar
+            android:id="@+id/pbWriting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+    </TableRow>
+</LinearLayout>
